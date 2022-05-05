@@ -1,5 +1,5 @@
 ﻿using SistemaBalcao.Forms.Cadastro;
-using SistemaBalcao.Forms.Pedido;
+using SistemaBalcao.Forms.PedidoForms;
 using SistemaBalcao.Modelos;
 using SistemaBalcao.Requests;
 using System;
@@ -28,21 +28,13 @@ namespace SistemaBalcao
                 return;
             }
 
-            var NovoProdutos = new NP_Produtos();
-            var NovoPedido = new Pedido();
-            NovoPedido.Nome = NomeBox.Text;
-            NovoPedido.Telefone = TelefoneBox.Text;
-            NovoPedido.Bairro = BairroBox.Text;
-            NovoPedido.Logradouro = LogradouroBox.Text;
-            NovoPedido.Cidade = CidadeBox.Text;
-
-           if(TipoPedidoBox1.Text == "Balcão")
-            {
-                NovoPedido.TeleEntrega = false;
-            }
-           else NovoPedido.TeleEntrega=true;
-
-            await PedidoRequest.NovoPedido(NovoPedido);
+            var NovoProdutos = new NP_Produtos(
+                NomeBox.Text, 
+                LogradouroBox.Text, 
+                BairroBox.Text,
+                CidadeBox.Text,
+                TelefoneBox.Text,
+                TipoPedidoBox1.Text);
 
             NovoProdutos.Show();
             this.Close();

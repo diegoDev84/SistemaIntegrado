@@ -11,13 +11,13 @@ namespace SistemaBalcao.Requests
 {
     public class PedidoRequest
     {
-        //public static list<produto> produtos()
-        //{
-        //    string url = "https://dragon-api.herokuapp.com/produto";
-        //    string json = (new system.net.webclient()).downloadstring(url);
-        //    var lista = jsonconvert.deserializeobject<list<produto>>(json);
-        //    return lista;
-        //}
+        public static List<Pedido>pedidos()
+        {
+            string url = "https://dragon-api.herokuapp.com/pedido";
+            string json = (new System.Net.WebClient()).DownloadString(url);
+            var lista = JsonConvert.DeserializeObject<List<Pedido>>(json);
+            return lista;
+        }
 
         public static async Task NovoPedido(Pedido pedido)
         {

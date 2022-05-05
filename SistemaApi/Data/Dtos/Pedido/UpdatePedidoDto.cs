@@ -13,7 +13,7 @@ namespace SistemaApi.Data.Dtos.Pedido
         public string Logradouro { get; set; }
         public string Bairro { get; set; }
         public string Cidade { get; set; }
-        public bool TeleEntrega { get; set; }
-        public List<ReadPedidoDto> ListaPedido { get; set; }
+        public string TipoPedido { get; set; }
+        public double ValorTotal { get; set; }
     }
 }

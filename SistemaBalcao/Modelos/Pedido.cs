@@ -11,8 +11,7 @@ namespace SistemaBalcao.Modelos
         public string Logradouro { get; set; }
         public string Bairro { get; set; }
         public string Cidade { get; set; }
-        public bool TeleEntrega { get; set; }
-        public List<Pedido> ListaPedido { get; set; }
-
+        public string TipoPedido { get; set; }
+        public double ValorTotal { get; set; }
     }
 }

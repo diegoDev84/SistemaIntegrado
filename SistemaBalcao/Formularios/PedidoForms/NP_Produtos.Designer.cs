@@ -1,4 +1,4 @@
-﻿namespace SistemaBalcao.Forms.Pedido
+﻿namespace SistemaBalcao.Forms.PedidoForms
 {
     partial class NP_Produtos
     {
@@ -29,27 +29,21 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.listBox6 = new System.Windows.Forms.ListBox();
-            this.listBox5 = new System.Windows.Forms.ListBox();
-            this.listBox4 = new System.Windows.Forms.ListBox();
-            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.TipoPedidoBox = new System.Windows.Forms.TextBox();
+            this.EnderecoPedidoBox = new System.Windows.Forms.TextBox();
+            this.TelefonePedidoBox = new System.Windows.Forms.TextBox();
+            this.NomePedidoBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.ListaItens = new System.Windows.Forms.ListBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.ConfirmaButton = new System.Windows.Forms.Button();
             this.CancelaButton = new System.Windows.Forms.Button();
             this.CancelaItemButton = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.listBox7 = new System.Windows.Forms.ListBox();
             this.DescontoBox2 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.DescontoBox = new System.Windows.Forms.ComboBox();
@@ -57,65 +51,64 @@
             this.PgtoBox = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TotalPedidoBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.listBox6);
-            this.panel1.Controls.Add(this.listBox5);
-            this.panel1.Controls.Add(this.listBox4);
-            this.panel1.Controls.Add(this.listBox3);
+            this.panel1.Controls.Add(this.TipoPedidoBox);
+            this.panel1.Controls.Add(this.EnderecoPedidoBox);
+            this.panel1.Controls.Add(this.TelefonePedidoBox);
+            this.panel1.Controls.Add(this.NomePedidoBox);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.listBox2);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(12, 39);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1158, 27);
             this.panel1.TabIndex = 0;
             // 
-            // listBox6
+            // TipoPedidoBox
             // 
-            this.listBox6.BackColor = System.Drawing.SystemColors.Control;
-            this.listBox6.FormattingEnabled = true;
-            this.listBox6.ItemHeight = 15;
-            this.listBox6.Location = new System.Drawing.Point(1014, 4);
-            this.listBox6.Name = "listBox6";
-            this.listBox6.Size = new System.Drawing.Size(141, 19);
-            this.listBox6.TabIndex = 10;
+            this.TipoPedidoBox.BackColor = System.Drawing.SystemColors.Control;
+            this.TipoPedidoBox.Enabled = false;
+            this.TipoPedidoBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TipoPedidoBox.Location = new System.Drawing.Point(1014, 2);
+            this.TipoPedidoBox.Name = "TipoPedidoBox";
+            this.TipoPedidoBox.Size = new System.Drawing.Size(141, 23);
+            this.TipoPedidoBox.TabIndex = 24;
             // 
-            // listBox5
+            // EnderecoPedidoBox
             // 
-            this.listBox5.BackColor = System.Drawing.SystemColors.Control;
-            this.listBox5.FormattingEnabled = true;
-            this.listBox5.ItemHeight = 15;
-            this.listBox5.Location = new System.Drawing.Point(601, 4);
-            this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(377, 19);
-            this.listBox5.TabIndex = 9;
+            this.EnderecoPedidoBox.BackColor = System.Drawing.SystemColors.Control;
+            this.EnderecoPedidoBox.Enabled = false;
+            this.EnderecoPedidoBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.EnderecoPedidoBox.Location = new System.Drawing.Point(583, 2);
+            this.EnderecoPedidoBox.Name = "EnderecoPedidoBox";
+            this.EnderecoPedidoBox.Size = new System.Drawing.Size(390, 23);
+            this.EnderecoPedidoBox.TabIndex = 23;
             // 
-            // listBox4
+            // TelefonePedidoBox
             // 
-            this.listBox4.BackColor = System.Drawing.SystemColors.Control;
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.ItemHeight = 15;
-            this.listBox4.Location = new System.Drawing.Point(413, 4);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(123, 19);
-            this.listBox4.TabIndex = 8;
+            this.TelefonePedidoBox.BackColor = System.Drawing.SystemColors.Control;
+            this.TelefonePedidoBox.Enabled = false;
+            this.TelefonePedidoBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TelefonePedidoBox.Location = new System.Drawing.Point(349, 2);
+            this.TelefonePedidoBox.Name = "TelefonePedidoBox";
+            this.TelefonePedidoBox.Size = new System.Drawing.Size(163, 23);
+            this.TelefonePedidoBox.TabIndex = 22;
             // 
-            // listBox3
+            // NomePedidoBox
             // 
-            this.listBox3.BackColor = System.Drawing.SystemColors.Control;
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 15;
-            this.listBox3.Location = new System.Drawing.Point(162, 4);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(189, 19);
-            this.listBox3.TabIndex = 7;
+            this.NomePedidoBox.BackColor = System.Drawing.SystemColors.Control;
+            this.NomePedidoBox.Enabled = false;
+            this.NomePedidoBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.NomePedidoBox.Location = new System.Drawing.Point(56, 2);
+            this.NomePedidoBox.Name = "NomePedidoBox";
+            this.NomePedidoBox.Size = new System.Drawing.Size(227, 23);
+            this.NomePedidoBox.TabIndex = 21;
             // 
             // label6
             // 
@@ -126,20 +119,10 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "Tipo:";
             // 
-            // listBox2
-            // 
-            this.listBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 15;
-            this.listBox2.Location = new System.Drawing.Point(66, 4);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(49, 19);
-            this.listBox2.TabIndex = 6;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(540, 6);
+            this.label5.Location = new System.Drawing.Point(518, 6);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 15);
             this.label5.TabIndex = 3;
@@ -148,7 +131,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(357, 6);
+            this.label4.Location = new System.Drawing.Point(289, 6);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 15);
             this.label4.TabIndex = 2;
@@ -157,20 +140,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(117, 6);
+            this.label3.Location = new System.Drawing.Point(3, 6);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 15);
             this.label3.TabIndex = 1;
             this.label3.Text = "Cliente:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 15);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Nº Pedido:";
             // 
             // label1
             // 
@@ -182,45 +156,15 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Pedido em andamento\r\n";
             // 
-            // checkedListBox1
+            // ListaItens
             // 
-            this.checkedListBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Todas",
-            "Acompanhamento",
-            "Bebida",
-            "Hambúrguer",
-            "Pizza",
-            "Prato",
-            "Sanduíche",
-            "Sushi",
-            "Xis",
-            "Outra"});
-            this.checkedListBox1.Location = new System.Drawing.Point(12, 97);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(173, 532);
-            this.checkedListBox1.TabIndex = 2;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(12, 73);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 21);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Categorias";
-            // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.SystemColors.Info;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(916, 96);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(254, 334);
-            this.listBox1.TabIndex = 4;
+            this.ListaItens.BackColor = System.Drawing.SystemColors.Info;
+            this.ListaItens.FormattingEnabled = true;
+            this.ListaItens.ItemHeight = 15;
+            this.ListaItens.Location = new System.Drawing.Point(916, 96);
+            this.ListaItens.Name = "ListaItens";
+            this.ListaItens.Size = new System.Drawing.Size(254, 334);
+            this.ListaItens.TabIndex = 4;
             // 
             // label8
             // 
@@ -232,13 +176,6 @@
             this.label8.TabIndex = 5;
             this.label8.Text = "Ítens";
             // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(191, 96);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(719, 536);
-            this.panel2.TabIndex = 6;
-            // 
             // ConfirmaButton
             // 
             this.ConfirmaButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -248,6 +185,7 @@
             this.ConfirmaButton.TabIndex = 8;
             this.ConfirmaButton.Text = "Confirmar";
             this.ConfirmaButton.UseVisualStyleBackColor = true;
+            this.ConfirmaButton.Click += new System.EventHandler(this.ConfirmaButton_Click);
             // 
             // CancelaButton
             // 
@@ -277,15 +215,6 @@
             this.label9.Size = new System.Drawing.Size(112, 25);
             this.label9.TabIndex = 11;
             this.label9.Text = "Valor Total:";
-            // 
-            // listBox7
-            // 
-            this.listBox7.FormattingEnabled = true;
-            this.listBox7.ItemHeight = 15;
-            this.listBox7.Location = new System.Drawing.Point(1026, 433);
-            this.listBox7.Name = "listBox7";
-            this.listBox7.Size = new System.Drawing.Size(144, 34);
-            this.listBox7.TabIndex = 12;
             // 
             // DescontoBox2
             // 
@@ -354,11 +283,21 @@
             this.textBox1.Size = new System.Drawing.Size(93, 23);
             this.textBox1.TabIndex = 18;
             // 
+            // TotalPedidoBox
+            // 
+            this.TotalPedidoBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TotalPedidoBox.Location = new System.Drawing.Point(1026, 435);
+            this.TotalPedidoBox.Name = "TotalPedidoBox";
+            this.TotalPedidoBox.ReadOnly = true;
+            this.TotalPedidoBox.Size = new System.Drawing.Size(141, 33);
+            this.TotalPedidoBox.TabIndex = 19;
+            // 
             // NP_Produtos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1181, 644);
+            this.Controls.Add(this.TotalPedidoBox);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.PgtoBox);
@@ -366,16 +305,12 @@
             this.Controls.Add(this.DescontoBox);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.DescontoBox2);
-            this.Controls.Add(this.listBox7);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.CancelaItemButton);
             this.Controls.Add(this.CancelaButton);
             this.Controls.Add(this.ConfirmaButton);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.ListaItens);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "NP_Produtos";
@@ -394,23 +329,13 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox ListaItens;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.ListBox listBox3;
-        private System.Windows.Forms.ListBox listBox6;
-        private System.Windows.Forms.ListBox listBox5;
-        private System.Windows.Forms.ListBox listBox4;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button ConfirmaButton;
         private System.Windows.Forms.Button CancelaButton;
         private System.Windows.Forms.Button CancelaItemButton;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ListBox listBox7;
         private System.Windows.Forms.TextBox DescontoBox2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox DescontoBox;
@@ -418,5 +343,10 @@
         private System.Windows.Forms.ComboBox PgtoBox;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TotalPedidoBox;
+        private System.Windows.Forms.TextBox TipoPedidoBox;
+        private System.Windows.Forms.TextBox EnderecoPedidoBox;
+        private System.Windows.Forms.TextBox TelefonePedidoBox;
+        private System.Windows.Forms.TextBox NomePedidoBox;
     }
 }

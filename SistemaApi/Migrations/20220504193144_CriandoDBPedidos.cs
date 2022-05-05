@@ -19,23 +19,11 @@ namespace SistemaApi.Migrations
                     Bairro = table.Column<string>(type: "text", nullable: true),
                     Cidade = table.Column<string>(type: "text", nullable: true),
                     TeleEntrega = table.Column<bool>(type: "tinyint(1)", nullable: false),
-                    PedidoId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Pedidos", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Pedidos_Pedidos_PedidoId",
-                        column: x => x.PedidoId,
-                        principalTable: "Pedidos",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Pedidos_PedidoId",
-                table: "Pedidos",
-                column: "PedidoId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

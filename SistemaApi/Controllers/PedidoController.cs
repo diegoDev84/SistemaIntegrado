@@ -55,8 +55,5 @@ namespace SistemaApi.Controllers
             if (resultado.IsFailed) return NotFound();
             return NoContent();
         }
-
-
-
     }
 }
