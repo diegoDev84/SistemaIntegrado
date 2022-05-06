@@ -176,12 +176,6 @@
             this.label8.Size = new System.Drawing.Size(47, 21);
             this.label8.TabIndex = 5;
             this.label8.Text = "Ítens";
-
-            //
-            // impressora
-            //
-            this.impressora.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.impressora_PrintPage);
-
             // 
             // ConfirmaButton
             // 
@@ -212,6 +206,7 @@
             this.CancelaItemButton.TabIndex = 10;
             this.CancelaItemButton.Text = "Cancelar Ítem";
             this.CancelaItemButton.UseVisualStyleBackColor = true;
+            this.CancelaItemButton.Click += new System.EventHandler(this.CancelaItemButton_Click);
             // 
             // label9
             // 
@@ -299,6 +294,10 @@
             TotalPedidoBox.Size = new System.Drawing.Size(141, 33);
             TotalPedidoBox.TabIndex = 19;
             // 
+            // impressora
+            // 
+            this.impressora.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.impressora_PrintPage);
+            // 
             // NP_Produtos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -337,7 +336,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        public static System.Windows.Forms.ListBox ListaItens;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button ConfirmaButton;
         private System.Windows.Forms.Button CancelaButton;
@@ -350,12 +348,12 @@
         private System.Windows.Forms.ComboBox PgtoBox;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox TrocoBox;
-        public static System.Windows.Forms.TextBox TotalPedidoBox;
         private System.Windows.Forms.TextBox TipoPedidoBox;
         private System.Windows.Forms.TextBox EnderecoPedidoBox;
         private System.Windows.Forms.TextBox TelefonePedidoBox;
         private System.Windows.Forms.TextBox NomePedidoBox;
         private System.Drawing.Printing.PrintDocument impressora;
-
+        public static System.Windows.Forms.ListBox ListaItens;
+        public static System.Windows.Forms.TextBox TotalPedidoBox;
     }
 }

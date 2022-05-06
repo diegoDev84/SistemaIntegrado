@@ -168,8 +168,14 @@ namespace SistemaBalcao.Forms.PedidoForms
             tamanhoDaLinha += espacamento;
             Escrever("Agradecemos a preferência!");
 
+        }
 
-
+        private void CancelaItemButton_Click(object sender, EventArgs e)
+        {
+            if (ListaItens.SelectedItem != null)
+                ListaItens.Items.Remove(ListaItens.SelectedItem);
+            else
+                MessageBox.Show("Selecione um ítem da lista para remover.");
         }
     }
 }
