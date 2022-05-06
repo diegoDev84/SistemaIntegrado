@@ -20,6 +20,7 @@ namespace SistemaApi.Data
         public DbSet<Complemento> Complementos { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Pedido> Pedidos { get; set; }
+        public DbSet<DadosEmpresa> Empresa { get; set; }
     }
    
 }

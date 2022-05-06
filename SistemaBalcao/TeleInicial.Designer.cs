@@ -49,14 +49,16 @@
             this.abrirCaixaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.fecharCaixaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.faturamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.NomeFantasiaBox = new System.Windows.Forms.TextBox();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Location = new System.Drawing.Point(0, 24);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 29);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(991, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(13, 5, 0, 5);
+            this.menuStrip1.Size = new System.Drawing.Size(1086, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -68,7 +70,8 @@
             this.financeiroToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(991, 24);
+            this.menuStrip2.Padding = new System.Windows.Forms.Padding(13, 5, 0, 5);
+            this.menuStrip2.Size = new System.Drawing.Size(1086, 29);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -79,7 +82,7 @@
             this.históricoDoDiaToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.principalToolStripMenuItem.Name = "principalToolStripMenuItem";
-            this.principalToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.principalToolStripMenuItem.Size = new System.Drawing.Size(65, 19);
             this.principalToolStripMenuItem.Text = "Principal";
             // 
             // novoPedidoToolStripMenuItem
@@ -114,7 +117,7 @@
             this.colaboradoresToolStripMenuItem,
             this.dadosDaEmpresaToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 19);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
             // 
             // produtosToolStripMenuItem
@@ -175,6 +178,7 @@
             this.dadosDaEmpresaToolStripMenuItem.Name = "dadosDaEmpresaToolStripMenuItem";
             this.dadosDaEmpresaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dadosDaEmpresaToolStripMenuItem.Text = "Dados da Empresa";
+            this.dadosDaEmpresaToolStripMenuItem.Click += new System.EventHandler(this.dadosDaEmpresaToolStripMenuItem_Click);
             // 
             // financeiroToolStripMenuItem
             // 
@@ -182,7 +186,7 @@
             this.abrirCaixaToolStripMenuItem,
             this.faturamentoToolStripMenuItem});
             this.financeiroToolStripMenuItem.Name = "financeiroToolStripMenuItem";
-            this.financeiroToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
+            this.financeiroToolStripMenuItem.Size = new System.Drawing.Size(74, 19);
             this.financeiroToolStripMenuItem.Text = "Financeiro";
             // 
             // abrirCaixaToolStripMenuItem
@@ -212,15 +216,33 @@
             this.faturamentoToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.faturamentoToolStripMenuItem.Text = "Faturamento";
             // 
+            // NomeFantasiaBox
+            // 
+            this.NomeFantasiaBox.BackColor = System.Drawing.SystemColors.Control;
+            this.NomeFantasiaBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NomeFantasiaBox.Enabled = false;
+            this.NomeFantasiaBox.Font = new System.Drawing.Font("Segoe UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.NomeFantasiaBox.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.NomeFantasiaBox.Location = new System.Drawing.Point(15, 251);
+            this.NomeFantasiaBox.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.NomeFantasiaBox.Name = "NomeFantasiaBox";
+            this.NomeFantasiaBox.Size = new System.Drawing.Size(1056, 86);
+            this.NomeFantasiaBox.TabIndex = 2;
+            this.NomeFantasiaBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // TeleInicial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(991, 523);
+            this.ClientSize = new System.Drawing.Size(1086, 606);
+            this.Controls.Add(this.NomeFantasiaBox);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
+            this.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "TeleInicial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestor Balcão";
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
@@ -252,5 +274,6 @@
         private System.Windows.Forms.ToolStripMenuItem históricoDoDiaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem categoriasToolStripMenuItem;
+        private System.Windows.Forms.TextBox NomeFantasiaBox;
     }
 }

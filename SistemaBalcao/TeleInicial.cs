@@ -1,5 +1,7 @@
 ﻿using SistemaBalcao.Forms.Cadastro;
 using SistemaBalcao.Formularios.Cadastro;
+using SistemaBalcao.Modelos;
+using SistemaBalcao.Requests;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +19,9 @@ namespace SistemaBalcao
         public TeleInicial()
         {
             InitializeComponent();
+            var empresa = DadosDaEmpresaRequest.Empresa();
+            NomeFantasiaBox.Text = empresa.NomeFantasia;
+
         }
 
         private void novoPedidoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -47,6 +52,12 @@ namespace SistemaBalcao
         {
             var cadastroCategorias = new CategoriaCadastro();
             cadastroCategorias.Show();
+        }
+
+        private void dadosDaEmpresaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var cadastroEmpresa = new EmpresaCadastro();
+            cadastroEmpresa.Show();
         }
     }
 }

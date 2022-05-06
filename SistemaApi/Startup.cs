@@ -36,6 +36,7 @@ namespace SistemaApi
             services.AddScoped<ComplementoService, ComplementoService>();
             services.AddScoped<CategoriaService, CategoriaService>();
             services.AddScoped<PedidoService, PedidoService>();
+            services.AddScoped<EmpresaService, EmpresaService>();
             services.AddControllers();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
