@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 
 namespace SistemaBalcao.Modelos
@@ -13,5 +14,7 @@ namespace SistemaBalcao.Modelos
         public string Cidade { get; set; }
         public string TipoPedido { get; set; }
         public double ValorTotal { get; set; }
+        public DateTime DataPedido { get; set; }
+        
     }
 }

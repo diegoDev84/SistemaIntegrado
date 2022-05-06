@@ -62,6 +62,7 @@ namespace SistemaBalcao.Formularios.Cadastro
                         complemento.Margem = Math.Round((complemento.Lucro / complemento.Preco) * 100, 2);
                     }
                     await ComplementoRequest.AtualizarComplemento(complemento);
+                    MessageBox.Show("Salvo com sucesso!");
                     ListarComplementos();
                     LimparBox();
                 }
@@ -83,6 +84,7 @@ namespace SistemaBalcao.Formularios.Cadastro
                         Id = Convert.ToInt32(ComplementoLista.SelectedItems[0].SubItems[5].Text)
                     };
                     await ComplementoRequest.DeletarComplemento(complemento);
+                    MessageBox.Show("Excluído com sucesso!");
                     ListarComplementos();
                     LimparBox();
                 }

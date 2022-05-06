@@ -1,4 +1,5 @@
-﻿using SistemaBalcao.Modelos;
+﻿using SistemaBalcao.Formularios.PedidoForms;
+using SistemaBalcao.Modelos;
 using SistemaBalcao.Requests;
 using System;
 using System.Drawing;
@@ -10,12 +11,13 @@ namespace SistemaBalcao.Forms.PedidoForms
     {
         string _bairro { get; set; }
         string _cidade { get; set; }
+        double _desconto { get; set; }
 
         Pedido NovoPedido = new Pedido();
 
         int x = 50;
         int y = 96;
-        double _totalPedido = 0;
+        public static double _totalPedido = 0;
 
         public NP_Produtos(string nome, string endereco, string bairro, string cidade, string telefone, string tipo)
         {
@@ -57,6 +59,11 @@ namespace SistemaBalcao.Forms.PedidoForms
             {
                 ListaItens.Items.Add("1x " + nome + "   " + preco.ToString("C"));
                 _totalPedido += preco;
+                if(complemento == true)
+                {
+                    var complementos = new NP_Complementos();
+                    complementos.Show();
+                }
                 TotalPedidoBox.Text = _totalPedido.ToString("C");
             };
         }
@@ -65,7 +72,16 @@ namespace SistemaBalcao.Forms.PedidoForms
         {
             if(DescontoBox.Text == "Financeiro" && !String.IsNullOrEmpty(DescontoBox2.Text))
             {
-                _totalPedido -= Convert.ToDouble(DescontoBox2.Text);
+                _desconto = Convert.ToDouble(DescontoBox2.Text);
+                _totalPedido -= _desconto;
+                TotalPedidoBox.Text = _totalPedido.ToString("C");
+            }
+
+            if (DescontoBox.Text == "Percentual" && !String.IsNullOrEmpty(DescontoBox2.Text))
+            {
+                double PercentualDesconto = Convert.ToDouble(DescontoBox2.Text);
+                _desconto = Math.Round(_totalPedido * (PercentualDesconto / 100), 2);
+                  _totalPedido -= _desconto;
                 TotalPedidoBox.Text = _totalPedido.ToString("C");
             }
 
@@ -76,6 +92,7 @@ namespace SistemaBalcao.Forms.PedidoForms
             NovoPedido.Logradouro = EnderecoPedidoBox.Text;
             NovoPedido.TipoPedido = TipoPedidoBox.Text;
             NovoPedido.ValorTotal = _totalPedido;
+            NovoPedido.DataPedido = DateTime.Now;
 
             await PedidoRequest.NovoPedido(NovoPedido);
             impressora.Print();
@@ -106,7 +123,7 @@ namespace SistemaBalcao.Forms.PedidoForms
             }
 
             EscreverNegrito("     .::"+TeleInicial._nomeFantasia+"::.");
-            EscreverNegrito(             "Fone: "+TeleInicial._telefone);
+            Escrever(             "Fone: "+TeleInicial._telefone);
             tamanhoDaLinha += espacamento;
             Escrever("Pedido: " + Program.NumeroPedido + "      " + DateTime.Now);
             Program.NumeroPedido++;
@@ -121,13 +138,17 @@ namespace SistemaBalcao.Forms.PedidoForms
             }
 
             tamanhoDaLinha += espacamento;
-
+            if(DescontoBox.Text != "Selecione")
+            {
+                Escrever("Desconto: -R$" + _desconto);
+            }
+            
             EscreverNegrito("Total do pedido...................................." + _totalPedido.ToString("C"));
             tamanhoDaLinha += espacamento;
             Escrever("Forma de pagamento: " + PgtoBox.Text);
             if (PgtoBox.Text == "Dinheiro")
             {
-                Escrever("Levar troco para.....................R$" + Convert.ToDouble(TrocoBox.Text));
+                Escrever("A Receber............................R$" + Convert.ToDouble(TrocoBox.Text));
                 double valorDoTroco = Convert.ToDouble(TrocoBox.Text) - _totalPedido;
                 Escrever("Valor do troco........................." + valorDoTroco.ToString("C"));
             }

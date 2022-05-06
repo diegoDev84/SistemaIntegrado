@@ -23,6 +23,7 @@ namespace SistemaBalcao.Formularios.Cadastro
                 return;
             }
             await CategoriaRequest.AdicionarCategoria(CriaCategoria());
+            MessageBox.Show("Adicionado com sucesso!");
             ListarCategorias();
             LimparBox();
         }
@@ -45,6 +46,7 @@ namespace SistemaBalcao.Formularios.Cadastro
                         Nome = NomeBox.Text,
                     };
                     await CategoriaRequest.AtualizarCategoria(categoria);
+                    MessageBox.Show("Salvo com sucesso!");
                     ListarCategorias();
                     LimparBox();
                 }
@@ -66,6 +68,7 @@ namespace SistemaBalcao.Formularios.Cadastro
                         Id = Convert.ToInt32(CategoriasLista.SelectedItems[0].SubItems[1].Text)
                     };
                     await CategoriaRequest.DeletarCategoria(categoria);
+                    MessageBox.Show("Excluído com sucesso!");
                     ListarCategorias();
                     LimparBox();
                 }

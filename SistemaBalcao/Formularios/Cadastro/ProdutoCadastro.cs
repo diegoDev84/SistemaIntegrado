@@ -29,6 +29,7 @@ namespace SistemaBalcao.Forms.Cadastro
             }
 
             await ProdutoRequest.AdicionarProduto(CriaProduto());
+            MessageBox.Show("Adicionado com sucesso!");
             ListarProdutos();
             LimparBox();
         }
@@ -65,6 +66,7 @@ namespace SistemaBalcao.Forms.Cadastro
                         produto.Margem = Math.Round((produto.Lucro / produto.Preco) * 100, 2);
                     }
                     await ProdutoRequest.AtualizarProduto(produto);
+                    MessageBox.Show("Salvo com sucesso!");
                     ListarProdutos();
                     LimparBox();
                 }

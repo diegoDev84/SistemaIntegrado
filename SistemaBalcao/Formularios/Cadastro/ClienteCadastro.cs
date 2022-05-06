@@ -35,6 +35,7 @@ namespace SistemaBalcao.Forms.Cadastro
                 };
 
             await ClienteRequest.AdicionarCliente(cliente);
+            MessageBox.Show("Adicionado com sucesso!");
             ListarClientes();
             LimparBox();
         }
@@ -58,6 +59,7 @@ namespace SistemaBalcao.Forms.Cadastro
                     Email = EmailBox.Text
                 };
                 await ClienteRequest.AtualizarCliente(cliente);
+                MessageBox.Show("Salvo com sucesso!");
                 ListarClientes();
                 LimparBox();
             }
@@ -84,6 +86,7 @@ namespace SistemaBalcao.Forms.Cadastro
                         Id = ClientesLista.SelectedItems[0].SubItems[0].Text,
                     };
                     await ClienteRequest.DeletarCliente(cliente);
+                    MessageBox.Show("Excluído com sucesso!");
                     ListarClientes();
                     LimparBox();
                 }

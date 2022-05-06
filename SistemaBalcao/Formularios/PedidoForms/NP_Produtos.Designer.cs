@@ -38,7 +38,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.ListaItens = new System.Windows.Forms.ListBox();
+            ListaItens = new System.Windows.Forms.ListBox();
             this.label8 = new System.Windows.Forms.Label();
             this.ConfirmaButton = new System.Windows.Forms.Button();
             this.CancelaButton = new System.Windows.Forms.Button();
@@ -51,7 +51,7 @@
             this.PgtoBox = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.TrocoBox = new System.Windows.Forms.TextBox();
-            this.TotalPedidoBox = new System.Windows.Forms.TextBox();
+            TotalPedidoBox = new System.Windows.Forms.TextBox();
             this.impressora = new System.Drawing.Printing.PrintDocument();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -159,13 +159,13 @@
             // 
             // ListaItens
             // 
-            this.ListaItens.BackColor = System.Drawing.SystemColors.Info;
-            this.ListaItens.FormattingEnabled = true;
-            this.ListaItens.ItemHeight = 15;
-            this.ListaItens.Location = new System.Drawing.Point(916, 96);
-            this.ListaItens.Name = "ListaItens";
-            this.ListaItens.Size = new System.Drawing.Size(254, 334);
-            this.ListaItens.TabIndex = 4;
+            ListaItens.BackColor = System.Drawing.SystemColors.Info;
+            ListaItens.FormattingEnabled = true;
+            ListaItens.ItemHeight = 15;
+            ListaItens.Location = new System.Drawing.Point(916, 96);
+            ListaItens.Name = "ListaItens";
+            ListaItens.Size = new System.Drawing.Size(254, 334);
+            ListaItens.TabIndex = 4;
             // 
             // label8
             // 
@@ -292,19 +292,19 @@
             // 
             // TotalPedidoBox
             // 
-            this.TotalPedidoBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TotalPedidoBox.Location = new System.Drawing.Point(1026, 435);
-            this.TotalPedidoBox.Name = "TotalPedidoBox";
-            this.TotalPedidoBox.ReadOnly = true;
-            this.TotalPedidoBox.Size = new System.Drawing.Size(141, 33);
-            this.TotalPedidoBox.TabIndex = 19;
+            TotalPedidoBox.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            TotalPedidoBox.Location = new System.Drawing.Point(1026, 435);
+            TotalPedidoBox.Name = "TotalPedidoBox";
+            TotalPedidoBox.ReadOnly = true;
+            TotalPedidoBox.Size = new System.Drawing.Size(141, 33);
+            TotalPedidoBox.TabIndex = 19;
             // 
             // NP_Produtos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1181, 644);
-            this.Controls.Add(this.TotalPedidoBox);
+            this.Controls.Add(TotalPedidoBox);
             this.Controls.Add(this.TrocoBox);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.PgtoBox);
@@ -317,7 +317,7 @@
             this.Controls.Add(this.CancelaButton);
             this.Controls.Add(this.ConfirmaButton);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.ListaItens);
+            this.Controls.Add(ListaItens);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "NP_Produtos";
@@ -337,7 +337,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox ListaItens;
+        public static System.Windows.Forms.ListBox ListaItens;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button ConfirmaButton;
         private System.Windows.Forms.Button CancelaButton;
@@ -350,7 +350,7 @@
         private System.Windows.Forms.ComboBox PgtoBox;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox TrocoBox;
-        private System.Windows.Forms.TextBox TotalPedidoBox;
+        public static System.Windows.Forms.TextBox TotalPedidoBox;
         private System.Windows.Forms.TextBox TipoPedidoBox;
         private System.Windows.Forms.TextBox EnderecoPedidoBox;
         private System.Windows.Forms.TextBox TelefonePedidoBox;

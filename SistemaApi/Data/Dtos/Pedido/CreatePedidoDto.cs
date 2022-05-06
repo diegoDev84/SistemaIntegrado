@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace SistemaApi.Data.Dtos.Pedido
 {
@@ -11,5 +12,6 @@ namespace SistemaApi.Data.Dtos.Pedido
         public string Cidade { get; set; }
         public string TipoPedido { get; set; }
         public double ValorTotal { get; set; }
+        public DateTime DataPedido { get; set; }
     }
 }
