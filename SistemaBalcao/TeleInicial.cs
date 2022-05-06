@@ -59,5 +59,10 @@ namespace SistemaBalcao
             var cadastroEmpresa = new EmpresaCadastro();
             cadastroEmpresa.Show();
         }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

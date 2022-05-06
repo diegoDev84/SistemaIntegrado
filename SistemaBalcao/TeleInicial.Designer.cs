@@ -32,23 +32,14 @@
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.principalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.históricoDoDiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.complementosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.teleEntregaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.fornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.colaboradoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dadosDaEmpresaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.financeiroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.abrirCaixaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.abrirCaixaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.fecharCaixaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.faturamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.NomeFantasiaBox = new System.Windows.Forms.TextBox();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -66,8 +57,7 @@
             // 
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.principalToolStripMenuItem,
-            this.cadastroToolStripMenuItem,
-            this.financeiroToolStripMenuItem});
+            this.cadastroToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Padding = new System.Windows.Forms.Padding(13, 5, 0, 5);
@@ -79,30 +69,24 @@
             // 
             this.principalToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.novoPedidoToolStripMenuItem,
-            this.históricoDoDiaToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.principalToolStripMenuItem.Name = "principalToolStripMenuItem";
-            this.principalToolStripMenuItem.Size = new System.Drawing.Size(65, 19);
+            this.principalToolStripMenuItem.Size = new System.Drawing.Size(122, 19);
             this.principalToolStripMenuItem.Text = "Principal";
             // 
             // novoPedidoToolStripMenuItem
             // 
             this.novoPedidoToolStripMenuItem.Name = "novoPedidoToolStripMenuItem";
-            this.novoPedidoToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.novoPedidoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.novoPedidoToolStripMenuItem.Text = "Novo pedido";
             this.novoPedidoToolStripMenuItem.Click += new System.EventHandler(this.novoPedidoToolStripMenuItem_Click);
-            // 
-            // históricoDoDiaToolStripMenuItem
-            // 
-            this.históricoDoDiaToolStripMenuItem.Name = "históricoDoDiaToolStripMenuItem";
-            this.históricoDoDiaToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.históricoDoDiaToolStripMenuItem.Text = "Histórico do dia";
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // cadastroToolStripMenuItem
             // 
@@ -110,11 +94,8 @@
             this.produtosToolStripMenuItem,
             this.complementosToolStripMenuItem,
             this.categoriasToolStripMenuItem,
-            this.teleEntregaToolStripMenuItem,
             this.ClientesToolStripMenuItem,
             this.clientesToolStripMenuItem1,
-            this.fornecedoresToolStripMenuItem,
-            this.colaboradoresToolStripMenuItem,
             this.dadosDaEmpresaToolStripMenuItem});
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 19);
@@ -141,13 +122,6 @@
             this.categoriasToolStripMenuItem.Text = "Categorias";
             this.categoriasToolStripMenuItem.Click += new System.EventHandler(this.categoriasToolStripMenuItem_Click);
             // 
-            // teleEntregaToolStripMenuItem
-            // 
-            this.teleEntregaToolStripMenuItem.Name = "teleEntregaToolStripMenuItem";
-            this.teleEntregaToolStripMenuItem.RightToLeftAutoMirrorImage = true;
-            this.teleEntregaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.teleEntregaToolStripMenuItem.Text = "Taxa de Entrega";
-            // 
             // ClientesToolStripMenuItem
             // 
             this.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem";
@@ -161,60 +135,12 @@
             this.clientesToolStripMenuItem1.Text = "Clientes";
             this.clientesToolStripMenuItem1.Click += new System.EventHandler(this.clientesToolStripMenuItem1_Click);
             // 
-            // fornecedoresToolStripMenuItem
-            // 
-            this.fornecedoresToolStripMenuItem.Name = "fornecedoresToolStripMenuItem";
-            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.fornecedoresToolStripMenuItem.Text = "Fornecedores";
-            // 
-            // colaboradoresToolStripMenuItem
-            // 
-            this.colaboradoresToolStripMenuItem.Name = "colaboradoresToolStripMenuItem";
-            this.colaboradoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.colaboradoresToolStripMenuItem.Text = "Colaboradores";
-            // 
             // dadosDaEmpresaToolStripMenuItem
             // 
             this.dadosDaEmpresaToolStripMenuItem.Name = "dadosDaEmpresaToolStripMenuItem";
             this.dadosDaEmpresaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dadosDaEmpresaToolStripMenuItem.Text = "Dados da Empresa";
             this.dadosDaEmpresaToolStripMenuItem.Click += new System.EventHandler(this.dadosDaEmpresaToolStripMenuItem_Click);
-            // 
-            // financeiroToolStripMenuItem
-            // 
-            this.financeiroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.abrirCaixaToolStripMenuItem,
-            this.faturamentoToolStripMenuItem});
-            this.financeiroToolStripMenuItem.Name = "financeiroToolStripMenuItem";
-            this.financeiroToolStripMenuItem.Size = new System.Drawing.Size(74, 19);
-            this.financeiroToolStripMenuItem.Text = "Financeiro";
-            // 
-            // abrirCaixaToolStripMenuItem
-            // 
-            this.abrirCaixaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.abrirCaixaToolStripMenuItem1,
-            this.fecharCaixaToolStripMenuItem});
-            this.abrirCaixaToolStripMenuItem.Name = "abrirCaixaToolStripMenuItem";
-            this.abrirCaixaToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.abrirCaixaToolStripMenuItem.Text = "Caixa";
-            // 
-            // abrirCaixaToolStripMenuItem1
-            // 
-            this.abrirCaixaToolStripMenuItem1.Name = "abrirCaixaToolStripMenuItem1";
-            this.abrirCaixaToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
-            this.abrirCaixaToolStripMenuItem1.Text = "Abrir Caixa";
-            // 
-            // fecharCaixaToolStripMenuItem
-            // 
-            this.fecharCaixaToolStripMenuItem.Name = "fecharCaixaToolStripMenuItem";
-            this.fecharCaixaToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
-            this.fecharCaixaToolStripMenuItem.Text = "Fechar Caixa";
-            // 
-            // faturamentoToolStripMenuItem
-            // 
-            this.faturamentoToolStripMenuItem.Name = "faturamentoToolStripMenuItem";
-            this.faturamentoToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.faturamentoToolStripMenuItem.Text = "Faturamento";
             // 
             // NomeFantasiaBox
             // 
@@ -262,16 +188,7 @@
         private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem complementosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ClientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem fornecedoresToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem financeiroToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem abrirCaixaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem abrirCaixaToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem fecharCaixaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem faturamentoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem teleEntregaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem colaboradoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dadosDaEmpresaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem históricoDoDiaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem categoriasToolStripMenuItem;
         private System.Windows.Forms.TextBox NomeFantasiaBox;
