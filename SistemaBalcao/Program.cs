@@ -3,11 +3,9 @@ using System.Windows.Forms;
 
 namespace SistemaBalcao
 {
-    internal static class Program
+    public static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
+        public static int NumeroPedido = 1;
         [STAThread]
         static void Main()
         {

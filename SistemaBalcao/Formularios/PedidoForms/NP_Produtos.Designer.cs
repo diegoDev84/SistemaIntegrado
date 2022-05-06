@@ -50,8 +50,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.PgtoBox = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TrocoBox = new System.Windows.Forms.TextBox();
             this.TotalPedidoBox = new System.Windows.Forms.TextBox();
+            this.impressora = new System.Drawing.Printing.PrintDocument();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -175,6 +176,12 @@
             this.label8.Size = new System.Drawing.Size(47, 21);
             this.label8.TabIndex = 5;
             this.label8.Text = "Ítens";
+
+            //
+            // impressora
+            //
+            this.impressora.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.impressora_PrintPage);
+
             // 
             // ConfirmaButton
             // 
@@ -276,12 +283,12 @@
             this.label12.TabIndex = 17;
             this.label12.Text = "Troco para:";
             // 
-            // textBox1
+            // TrocoBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(982, 536);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(93, 23);
-            this.textBox1.TabIndex = 18;
+            this.TrocoBox.Location = new System.Drawing.Point(982, 536);
+            this.TrocoBox.Name = "TrocoBox";
+            this.TrocoBox.Size = new System.Drawing.Size(93, 23);
+            this.TrocoBox.TabIndex = 18;
             // 
             // TotalPedidoBox
             // 
@@ -298,7 +305,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1181, 644);
             this.Controls.Add(this.TotalPedidoBox);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TrocoBox);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.PgtoBox);
             this.Controls.Add(this.label11);
@@ -342,11 +349,13 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox PgtoBox;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TrocoBox;
         private System.Windows.Forms.TextBox TotalPedidoBox;
         private System.Windows.Forms.TextBox TipoPedidoBox;
         private System.Windows.Forms.TextBox EnderecoPedidoBox;
         private System.Windows.Forms.TextBox TelefonePedidoBox;
         private System.Windows.Forms.TextBox NomePedidoBox;
+        private System.Drawing.Printing.PrintDocument impressora;
+
     }
 }

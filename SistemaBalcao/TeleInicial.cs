@@ -16,12 +16,16 @@ namespace SistemaBalcao
 {
     public partial class TeleInicial : Form
     {
+        public static string _nomeFantasia { get; set; }
+        public static string _telefone { get; set; }
         public TeleInicial()
         {
             InitializeComponent();
             var empresa = DadosDaEmpresaRequest.Empresa();
-            NomeFantasiaBox.Text = empresa.NomeFantasia;
+            _nomeFantasia = empresa.NomeFantasia;
+            _telefone = empresa.Telefone;
 
+            NomeFantasiaBox.Text = _nomeFantasia;            
         }
 
         private void novoPedidoToolStripMenuItem_Click(object sender, EventArgs e)
