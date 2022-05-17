@@ -31,7 +31,7 @@ namespace SistemaApi.Controllers
             if (readDto != null) return Ok(readDto);
             return NotFound();
         }
-
+        
         [HttpGet("{id}")]
         public IActionResult RecuperaPedidoPorId(int id)
         {

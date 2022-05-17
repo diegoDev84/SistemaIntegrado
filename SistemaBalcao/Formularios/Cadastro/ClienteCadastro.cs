@@ -46,7 +46,7 @@ namespace SistemaBalcao.Forms.Cadastro
             {
                 var cliente = new Cliente
                 {
-                    Id = ClientesLista.SelectedItems[0].SubItems[0].Text,
+                    Id = Convert.ToInt32(ClientesLista.SelectedItems[0].SubItems[0].Text),
                     Nome = NomeBox.Text,
                     Telefone = TelefoneBox.Text,
                     Logradouro = LogradouroBox.Text,
@@ -83,7 +83,7 @@ namespace SistemaBalcao.Forms.Cadastro
                 {
                     var cliente = new Cliente
                     {
-                        Id = ClientesLista.SelectedItems[0].SubItems[0].Text,
+                        Id = Convert.ToInt32(ClientesLista.SelectedItems[0].SubItems[0].Text),
                     };
                     await ClienteRequest.DeletarCliente(cliente);
                     MessageBox.Show("Excluído com sucesso!");
@@ -116,7 +116,7 @@ namespace SistemaBalcao.Forms.Cadastro
             {
                 ListViewItem item = new ListViewItem(new[]
                     {
-                    c.Id,
+                    c.Id.ToString(),
                     c.Nome,
                     c.Telefone,
                     c.Logradouro,

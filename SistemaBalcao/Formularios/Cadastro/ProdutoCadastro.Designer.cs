@@ -297,6 +297,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(608, 484);
             this.Controls.Add(this.MargemLabel);
             this.Controls.Add(this.LucroLabel);
@@ -318,6 +319,7 @@
             this.Controls.Add(this.ExcluiButton);
             this.Controls.Add(this.AdicionaButton);
             this.Name = "ProdutoCadastro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Produto";
             ((System.ComponentModel.ISupportInitialize)(this.categoriaBindingSource)).EndInit();
             this.ResumeLayout(false);

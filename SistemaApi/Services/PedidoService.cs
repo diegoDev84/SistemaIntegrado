@@ -36,7 +36,7 @@ namespace SistemaApi.Services
             }
             return _mapper.Map<List<ReadPedidoDto>>(pedidos);
         }
-
+        
         public ReadPedidoDto RecuperaPedidoPorId(int id)
         {
             Pedido pedido = _context.Pedidos.FirstOrDefault(p => p.Id == id);

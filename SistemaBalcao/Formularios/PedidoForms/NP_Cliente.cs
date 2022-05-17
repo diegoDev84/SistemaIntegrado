@@ -1,21 +1,20 @@
 ﻿using SistemaBalcao.Forms.Cadastro;
 using SistemaBalcao.Forms.PedidoForms;
-using SistemaBalcao.Modelos;
 using SistemaBalcao.Requests;
 using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace SistemaBalcao
 {
     public partial class NP_Cliente : Form
     {
+        public static int ClienteID = 4;
         public NP_Cliente()
         {
             InitializeComponent();
         }
 
-        private async void OkButton_Click(object sender, EventArgs e)
+        private void OkButton_Click(object sender, EventArgs e)
         {
             if(string.IsNullOrEmpty(NomeBox.Text))
             {
@@ -34,7 +33,8 @@ namespace SistemaBalcao
                 BairroBox.Text,
                 CidadeBox.Text,
                 TelefoneBox.Text,
-                TipoPedidoBox1.Text);
+                TipoPedidoBox1.Text
+                );
 
             NovoProdutos.Show();
             this.Close();
@@ -61,6 +61,7 @@ namespace SistemaBalcao
                     LogradouroBox.Text = c.Logradouro;
                     BairroBox.Text = c.Bairro;
                     CidadeBox.Text = c.Cidade;
+                    ClienteID = c.Id;
                     break;
                 }
             }

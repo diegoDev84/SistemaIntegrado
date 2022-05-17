@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace SistemaApi.Models
 {
@@ -18,6 +20,8 @@ namespace SistemaApi.Models
         public string UF { get; set; }
         public string CEP { get; set; }
         public string Email { get; set; }
+        [JsonIgnore]
+        public virtual List<Pedido> Pedidos{ get; set; }
 
     }
 }

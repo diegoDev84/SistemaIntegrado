@@ -54,6 +54,7 @@ namespace SistemaBalcao.Forms.PedidoForms
             ProdutoBtn.Location = new Point(x, y);
             ProdutoBtn.Size = new Size(110, 80);
             ProdutoBtn.Text = nome;
+            ProdutoBtn.BackColor = Color.AliceBlue;
             Controls.Add(ProdutoBtn);
             ProdutoBtn.Click += delegate
             {
@@ -85,14 +86,10 @@ namespace SistemaBalcao.Forms.PedidoForms
                 TotalPedidoBox.Text = _totalPedido.ToString("C");
             }
 
-            NovoPedido.Nome = NomePedidoBox.Text;
-            NovoPedido.Telefone = TelefonePedidoBox.Text;
-            NovoPedido.Bairro = _bairro;
-            NovoPedido.Cidade = _cidade;
-            NovoPedido.Logradouro = EnderecoPedidoBox.Text;
             NovoPedido.TipoPedido = TipoPedidoBox.Text;
             NovoPedido.ValorTotal = _totalPedido;
             NovoPedido.DataPedido = DateTime.Now;
+            NovoPedido.ClienteID = NP_Cliente.ClienteID;
 
             await PedidoRequest.NovoPedido(NovoPedido);
             impressora.Print();

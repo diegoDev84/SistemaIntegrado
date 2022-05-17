@@ -214,22 +214,24 @@
             // 
             // SalvaButton
             // 
+            this.SalvaButton.BackgroundImage = global::SistemaBalcao.Properties.Resources.checkIcon;
+            this.SalvaButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.SalvaButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.SalvaButton.Location = new System.Drawing.Point(230, 261);
+            this.SalvaButton.Location = new System.Drawing.Point(227, 243);
             this.SalvaButton.Name = "SalvaButton";
-            this.SalvaButton.Size = new System.Drawing.Size(75, 32);
+            this.SalvaButton.Size = new System.Drawing.Size(80, 51);
             this.SalvaButton.TabIndex = 11;
-            this.SalvaButton.Text = "Salvar";
             this.SalvaButton.UseVisualStyleBackColor = true;
             this.SalvaButton.Click += new System.EventHandler(this.SalvaButton_Click);
             // 
             // FechaButton
             // 
-            this.FechaButton.Location = new System.Drawing.Point(314, 261);
+            this.FechaButton.BackgroundImage = global::SistemaBalcao.Properties.Resources.cancel_icon;
+            this.FechaButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.FechaButton.Location = new System.Drawing.Point(313, 243);
             this.FechaButton.Name = "FechaButton";
-            this.FechaButton.Size = new System.Drawing.Size(75, 32);
+            this.FechaButton.Size = new System.Drawing.Size(75, 51);
             this.FechaButton.TabIndex = 12;
-            this.FechaButton.Text = "Fechar";
             this.FechaButton.UseVisualStyleBackColor = true;
             this.FechaButton.Click += new System.EventHandler(this.FechaButton_Click);
             // 
@@ -237,6 +239,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(619, 307);
             this.Controls.Add(this.FechaButton);
             this.Controls.Add(this.SalvaButton);
@@ -261,6 +264,7 @@
             this.Controls.Add(this.cnpjBox);
             this.Controls.Add(this.label1);
             this.Name = "EmpresaCadastro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmpresaCadastro";
             this.ResumeLayout(false);
             this.PerformLayout();

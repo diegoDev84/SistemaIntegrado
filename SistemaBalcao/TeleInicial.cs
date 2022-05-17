@@ -1,5 +1,6 @@
 ﻿using SistemaBalcao.Forms.Cadastro;
 using SistemaBalcao.Formularios.Cadastro;
+using SistemaBalcao.Formularios.Relatorios;
 using SistemaBalcao.Modelos;
 using SistemaBalcao.Requests;
 using System;
@@ -25,7 +26,7 @@ namespace SistemaBalcao
             _nomeFantasia = empresa.NomeFantasia;
             _telefone = empresa.Telefone;
 
-            NomeFantasiaBox.Text = _nomeFantasia;            
+            NomeFantasiaLabel.Text = _nomeFantasia;
         }
 
         private void novoPedidoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -67,6 +68,48 @@ namespace SistemaBalcao
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void pedidosPorClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var PedidosCliente = new PedidosCliente();
+            PedidosCliente.Show();
+        }
+
+        private void pedidosPorPeríodoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var PedidosPeriodo = new PedidosPeriodo();
+            PedidosPeriodo.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var NovoPedido = new NP_Cliente();
+            NovoPedido.Show();
+        }
+
+        private void NovoClientBtn_Click(object sender, EventArgs e)
+        {
+            var NovoCliente = new ClienteCadastro();
+            NovoCliente.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var DeliveryDia = new DeliveryDia();
+            DeliveryDia.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var BalcaoDia = new BalcaoDia();
+            BalcaoDia.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var VendasDia = new VendasDia();
+            VendasDia.Show();
         }
     }
 }

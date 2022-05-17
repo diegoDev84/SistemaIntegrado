@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using RestSharp;
 using SistemaBalcao.Modelos;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace SistemaBalcao.Requests
             var lista = JsonConvert.DeserializeObject<List<Pedido>>(json);
             return lista;
         }
-
+        
         public static async Task NovoPedido(Pedido pedido)
         {
             var httpClient = new HttpClient();

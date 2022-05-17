@@ -151,26 +151,26 @@
             // 
             // OkButton
             // 
+            this.OkButton.BackgroundImage = global::SistemaBalcao.Properties.Resources.checkIcon;
             this.OkButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.OkButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.OkButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.OkButton.Location = new System.Drawing.Point(187, 210);
+            this.OkButton.Location = new System.Drawing.Point(187, 202);
             this.OkButton.Name = "OkButton";
-            this.OkButton.Size = new System.Drawing.Size(75, 42);
+            this.OkButton.Size = new System.Drawing.Size(90, 61);
             this.OkButton.TabIndex = 12;
-            this.OkButton.Text = "Próximo";
             this.OkButton.UseVisualStyleBackColor = true;
             this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
             // 
             // CancelaButton
             // 
+            this.CancelaButton.BackgroundImage = global::SistemaBalcao.Properties.Resources.cancel_icon;
             this.CancelaButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.CancelaButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CancelaButton.Location = new System.Drawing.Point(283, 210);
+            this.CancelaButton.Location = new System.Drawing.Point(283, 202);
             this.CancelaButton.Name = "CancelaButton";
-            this.CancelaButton.Size = new System.Drawing.Size(75, 42);
+            this.CancelaButton.Size = new System.Drawing.Size(75, 61);
             this.CancelaButton.TabIndex = 13;
-            this.CancelaButton.Text = "Cancelar";
             this.CancelaButton.UseVisualStyleBackColor = true;
             this.CancelaButton.Click += new System.EventHandler(this.CancelaButton_Click);
             // 
@@ -187,6 +187,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(375, 266);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.CancelaButton);
@@ -204,6 +205,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "NP_Cliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Novo Pedido - Cliente";
             this.ResumeLayout(false);
             this.PerformLayout();

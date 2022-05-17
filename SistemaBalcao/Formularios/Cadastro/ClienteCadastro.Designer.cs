@@ -113,7 +113,7 @@
             // 
             // FechaButton
             // 
-            this.FechaButton.Location = new System.Drawing.Point(572, 507);
+            this.FechaButton.Location = new System.Drawing.Point(605, 507);
             this.FechaButton.Name = "FechaButton";
             this.FechaButton.Size = new System.Drawing.Size(75, 23);
             this.FechaButton.TabIndex = 32;
@@ -123,7 +123,7 @@
             // 
             // CancelaButton
             // 
-            this.CancelaButton.Location = new System.Drawing.Point(491, 507);
+            this.CancelaButton.Location = new System.Drawing.Point(524, 507);
             this.CancelaButton.Name = "CancelaButton";
             this.CancelaButton.Size = new System.Drawing.Size(75, 23);
             this.CancelaButton.TabIndex = 31;
@@ -133,7 +133,7 @@
             // 
             // ExcluiButton
             // 
-            this.ExcluiButton.Location = new System.Drawing.Point(410, 507);
+            this.ExcluiButton.Location = new System.Drawing.Point(443, 507);
             this.ExcluiButton.Name = "ExcluiButton";
             this.ExcluiButton.Size = new System.Drawing.Size(75, 23);
             this.ExcluiButton.TabIndex = 30;
@@ -144,7 +144,7 @@
             // SalvaButton
             // 
             this.SalvaButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.SalvaButton.Location = new System.Drawing.Point(248, 507);
+            this.SalvaButton.Location = new System.Drawing.Point(281, 507);
             this.SalvaButton.Name = "SalvaButton";
             this.SalvaButton.Size = new System.Drawing.Size(75, 23);
             this.SalvaButton.TabIndex = 28;
@@ -353,7 +353,7 @@
             // AtualizaButton
             // 
             this.AtualizaButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.AtualizaButton.Location = new System.Drawing.Point(329, 507);
+            this.AtualizaButton.Location = new System.Drawing.Point(362, 507);
             this.AtualizaButton.Name = "AtualizaButton";
             this.AtualizaButton.Size = new System.Drawing.Size(75, 23);
             this.AtualizaButton.TabIndex = 29;
@@ -365,6 +365,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(961, 546);
             this.Controls.Add(this.AtualizaButton);
             this.Controls.Add(this.BairroBox);
@@ -393,6 +394,7 @@
             this.Controls.Add(this.ExcluiButton);
             this.Controls.Add(this.SalvaButton);
             this.Name = "ClienteCadastro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Cliente";
             this.ResumeLayout(false);
             this.PerformLayout();

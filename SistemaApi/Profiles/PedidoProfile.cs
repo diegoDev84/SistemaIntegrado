@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using SistemaApi.Data.Dtos.Pedido;
 using SistemaApi.Models;
+using System.Linq;
+
 
 namespace SistemaApi.Profiles
 {

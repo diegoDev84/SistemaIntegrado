@@ -9,7 +9,7 @@ namespace SistemaBalcao.Requests
 {
     public class ProdutoRequest
     {
-        public static List<Produto> Produtos()
+        public static List<Produto>Produtos()
         {
             string url = "https://dragon-api.herokuapp.com/produto";
             string json = (new System.Net.WebClient()).DownloadString(url);

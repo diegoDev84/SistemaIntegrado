@@ -243,6 +243,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(453, 475);
             this.Controls.Add(this.MargemLabel);
             this.Controls.Add(this.LucroLabel);
@@ -261,6 +262,7 @@
             this.Controls.Add(this.ExcluiComplemento);
             this.Controls.Add(this.AdicionaComplemento);
             this.Name = "ComplementoCadastro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Complemento";
             this.ResumeLayout(false);
             this.PerformLayout();

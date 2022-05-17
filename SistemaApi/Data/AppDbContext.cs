@@ -9,11 +9,15 @@ namespace SistemaApi.Data
         {
 
         }
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
 
-        //protected override void OnModelCreating(ModelBuilder builder)
-        //{
-        //usar isso quando for vincular uma entidade a outra: um cinema tem tal filme.
-        //}
+            builder.Entity<Pedido>()
+                    .HasOne(pedido => pedido.Cliente)
+                    .WithMany(cliente => cliente.Pedidos)
+                    .HasForeignKey(pedido => pedido.ClienteID);
+
+        }
 
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Produto> Produtos { get; set; }

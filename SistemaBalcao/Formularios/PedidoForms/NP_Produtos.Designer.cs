@@ -179,33 +179,39 @@
             // 
             // ConfirmaButton
             // 
+            this.ConfirmaButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ConfirmaButton.BackgroundImage = global::SistemaBalcao.Properties.Resources.checkIcon;
+            this.ConfirmaButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ConfirmaButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ConfirmaButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ConfirmaButton.Location = new System.Drawing.Point(916, 568);
             this.ConfirmaButton.Name = "ConfirmaButton";
-            this.ConfirmaButton.Size = new System.Drawing.Size(160, 64);
+            this.ConfirmaButton.Size = new System.Drawing.Size(178, 64);
             this.ConfirmaButton.TabIndex = 8;
-            this.ConfirmaButton.Text = "Confirmar";
-            this.ConfirmaButton.UseVisualStyleBackColor = true;
+            this.ConfirmaButton.UseVisualStyleBackColor = false;
             this.ConfirmaButton.Click += new System.EventHandler(this.ConfirmaButton_Click);
             // 
             // CancelaButton
             // 
-            this.CancelaButton.Location = new System.Drawing.Point(1082, 568);
+            this.CancelaButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.CancelaButton.BackgroundImage = global::SistemaBalcao.Properties.Resources.cancel_icon;
+            this.CancelaButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.CancelaButton.Location = new System.Drawing.Point(1100, 568);
             this.CancelaButton.Name = "CancelaButton";
-            this.CancelaButton.Size = new System.Drawing.Size(88, 64);
+            this.CancelaButton.Size = new System.Drawing.Size(70, 64);
             this.CancelaButton.TabIndex = 9;
-            this.CancelaButton.Text = "Cancelar";
-            this.CancelaButton.UseVisualStyleBackColor = true;
+            this.CancelaButton.UseVisualStyleBackColor = false;
             this.CancelaButton.Click += new System.EventHandler(this.CancelaButton_Click);
             // 
             // CancelaItemButton
             // 
+            this.CancelaItemButton.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.CancelaItemButton.Location = new System.Drawing.Point(1081, 530);
             this.CancelaItemButton.Name = "CancelaItemButton";
             this.CancelaItemButton.Size = new System.Drawing.Size(89, 32);
             this.CancelaItemButton.TabIndex = 10;
             this.CancelaItemButton.Text = "Cancelar Ítem";
-            this.CancelaItemButton.UseVisualStyleBackColor = true;
+            this.CancelaItemButton.UseVisualStyleBackColor = false;
             this.CancelaItemButton.Click += new System.EventHandler(this.CancelaItemButton_Click);
             // 
             // label9
@@ -302,8 +308,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1181, 644);
-            this.Controls.Add(TotalPedidoBox);
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ClientSize = new System.Drawing.Size(1181, 636);
+            Controls.Add(TotalPedidoBox);
             this.Controls.Add(this.TrocoBox);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.PgtoBox);
@@ -316,10 +323,11 @@
             this.Controls.Add(this.CancelaButton);
             this.Controls.Add(this.ConfirmaButton);
             this.Controls.Add(this.label8);
-            this.Controls.Add(ListaItens);
+            Controls.Add(ListaItens);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "NP_Produtos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Novo Pedido - Produtos";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

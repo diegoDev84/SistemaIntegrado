@@ -1,8 +1,10 @@
 ﻿using Newtonsoft.Json;
+using SistemaBalcao.Modelos;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SistemaBalcao.Requests
 {
@@ -14,6 +16,14 @@ namespace SistemaBalcao.Requests
             string json = (new System.Net.WebClient()).DownloadString(url);
             var lista = JsonConvert.DeserializeObject<List<Cliente>>(json);
             return lista;
+        }
+
+        public static List<Pedido> ClientePedidos(int clienteID)
+        {
+            string url = $"https://dragon-api.herokuapp.com/cliente/{clienteID}";
+            string json = (new System.Net.WebClient()).DownloadString(url);
+            var lista = JsonConvert.DeserializeObject<Cliente>(json);
+            return lista.Pedidos;
         }
 
         public static async Task AdicionarCliente(Cliente cliente)

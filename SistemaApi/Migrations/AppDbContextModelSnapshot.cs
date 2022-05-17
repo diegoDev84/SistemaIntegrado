@@ -148,23 +148,11 @@ namespace SistemaApi.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("Bairro")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Cidade")
-                        .HasColumnType("text");
+                    b.Property<int>("ClienteID")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("DataPedido")
                         .HasColumnType("datetime");
-
-                    b.Property<string>("Logradouro")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Nome")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Telefone")
-                        .HasColumnType("text");
 
                     b.Property<string>("TipoPedido")
                         .HasColumnType("text");
@@ -173,6 +161,8 @@ namespace SistemaApi.Migrations
                         .HasColumnType("double");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ClienteID");
 
                     b.ToTable("Pedidos");
                 });
@@ -208,6 +198,22 @@ namespace SistemaApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Produtos");
+                });
+
+            modelBuilder.Entity("SistemaApi.Models.Pedido", b =>
+                {
+                    b.HasOne("SistemaApi.Models.Cliente", "Cliente")
+                        .WithMany("Pedidos")
+                        .HasForeignKey("ClienteID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cliente");
+                });
+
+            modelBuilder.Entity("SistemaApi.Models.Cliente", b =>
+                {
+                    b.Navigation("Pedidos");
                 });
 #pragma warning restore 612, 618
         }

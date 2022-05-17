@@ -138,6 +138,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(385, 412);
             this.Controls.Add(this.CategoriasLista);
             this.Controls.Add(this.SalvaButton);
@@ -148,6 +149,7 @@
             this.Controls.Add(this.ExcluiButton);
             this.Controls.Add(this.AdicionaButton);
             this.Name = "CategoriaCadastro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Categoria";
             this.ResumeLayout(false);
             this.PerformLayout();
