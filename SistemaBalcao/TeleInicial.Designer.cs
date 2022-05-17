@@ -158,8 +158,8 @@
             this.relatóriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.abrirFecharCaixaToolStripMenuItem,
             this.pedidosPorPeríodoToolStripMenuItem,
-            this.maisVendidosToolStripMenuItem,
-            this.pedidosPorClienteToolStripMenuItem});
+            this.pedidosPorClienteToolStripMenuItem,
+            this.maisVendidosToolStripMenuItem});
             this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
             this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(74, 19);
             this.relatóriosToolStripMenuItem.Text = "Financeiro";

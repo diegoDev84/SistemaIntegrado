@@ -42,8 +42,8 @@ namespace SistemaBalcao.Formularios.Relatorios
             var pedidos = PedidoRequest.pedidos();
             foreach(Pedido p in pedidos)
             {
-                if (p.DataPedido >= DataInicio.Value  &&
-                    p.DataPedido <= DataFim.Value)
+                if (p.DataPedido >= DataInicio.Value &&
+                    p.DataPedido <= DataFim.Value.AddDays(1))
                 {
                     ListViewItem item = new ListViewItem(new string[]
                     {

@@ -97,7 +97,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(386, 394);
+            this.ClientSize = new System.Drawing.Size(393, 394);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TotalBox);
             this.Controls.Add(this.VendasDiaList);
