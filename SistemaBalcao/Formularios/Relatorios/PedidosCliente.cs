@@ -29,7 +29,7 @@ namespace SistemaBalcao.Formularios.Relatorios
             this.Close();
         }
 
-        private async void BuscaButton_Click(object sender, EventArgs e)
+        private void BuscaButton_Click(object sender, EventArgs e)
         {
             PedidosClienteList.Items.Clear();
             TotalBox.Text = "";

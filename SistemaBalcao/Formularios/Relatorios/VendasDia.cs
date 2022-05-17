@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SistemaBalcao.Modelos;
+using SistemaBalcao.Requests;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,36 @@ namespace SistemaBalcao.Formularios.Relatorios
         public VendasDia()
         {
             InitializeComponent();
+            BuscarVendasDia();
         }
+        private void FechaButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        public void BuscarVendasDia()
+        {
+            VendasDiaList.Items.Clear();
+            double Total = 0;
+            var pedidos = PedidoRequest.pedidos();
+            foreach (Pedido p in pedidos)
+            {
+                if (p.DataPedido.Date == DateTime.Today)
+                {
+                    ListViewItem item = new ListViewItem(new string[]
+                    {
+                        p.DataPedido.ToString(),
+                        p.TipoPedido,
+                        p.ValorTotal.ToString("C")
+                    }); ;
+
+                    Total = +p.ValorTotal;
+                    TotalBox.Text = Total.ToString("C");
+                    VendasDiaList.Items.Add(item);
+                }
+            }
+        }
+
+
     }
 }
