@@ -16,14 +16,14 @@ namespace SistemaBalcao.Formularios.Relatorios
     {
         public int _clienteID { get; set; }
         public string _clienteNome;
-
+        
         public PedidosCliente()
         {
             InitializeComponent();
             PedidosClienteList.View = View.Details;
             PedidosClienteList.FullRowSelect = true;
         }
-
+        
         private void FechaButton_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -35,8 +35,8 @@ namespace SistemaBalcao.Formularios.Relatorios
             TotalBox.Text = "";
             BuscarCliente();
             BuscarPedidos();
-            MessageBox.Show("Busca concluída!");
         }
+
         public void BuscarCliente()
         {
             var clientes = ClienteRequest.Clientes();
@@ -55,18 +55,40 @@ namespace SistemaBalcao.Formularios.Relatorios
         {
             double Total = 0;
             var pedidos = ClienteRequest.ClientePedidos(_clienteID);
-            foreach (Pedido p in pedidos)
+            if(pedidos != null)
             {
-                ListViewItem item = new ListViewItem(new string[]
+                foreach (Pedido p in pedidos)
                 {
-                    p.DataPedido.ToString(),
-                    _clienteNome,
-                    p.TipoPedido,
-                    p.ValorTotal.ToString("C")
-                }); ;
-                Total = +p.ValorTotal;
-                TotalBox.Text = Total.ToString("C");
-                PedidosClienteList.Items.Add(item);
+                    if (PgtoBox.Text == p.FormaPagamento)
+                    {
+                        ListViewItem item = new ListViewItem(new string[]
+                        {
+                            p.DataPedido.ToString(),
+                            _clienteNome,
+                            p.TipoPedido,
+                            p.FormaPagamento,
+                            p.ValorTotal.ToString("C")
+                        });;
+                        Total = +p.ValorTotal;
+                        TotalBox.Text = Total.ToString("C");
+                        PedidosClienteList.Items.Add(item);
+                    }
+                    else if (PgtoBox.Text == "Todos")
+                    {
+                        ListViewItem item = new ListViewItem(new string[]
+                        {
+                            p.DataPedido.ToString(),
+                            _clienteNome,
+                            p.TipoPedido,
+                            p.FormaPagamento,
+                            p.ValorTotal.ToString("C")
+                        });;
+                        Total = +p.ValorTotal;
+                        TotalBox.Text = Total.ToString("C");
+                        PedidosClienteList.Items.Add(item);
+                    }
+                }
+                MessageBox.Show("Busca concluída!");
             }
         }
     }

@@ -11,12 +11,10 @@ namespace SistemaApi.Data
         }
         protected override void OnModelCreating(ModelBuilder builder)
         {
-
             builder.Entity<Pedido>()
                     .HasOne(pedido => pedido.Cliente)
                     .WithMany(cliente => cliente.Pedidos)
                     .HasForeignKey(pedido => pedido.ClienteID);
-
         }
 
         public DbSet<Cliente> Clientes { get; set; }

@@ -45,15 +45,34 @@ namespace SistemaBalcao.Formularios.Relatorios
                 if (p.DataPedido >= DataInicio.Value &&
                     p.DataPedido <= DataFim.Value.AddDays(1))
                 {
-                    ListViewItem item = new ListViewItem(new string[]
+                    if (PgtoBox.Text == p.FormaPagamento)
                     {
+                        ListViewItem item = new ListViewItem(new string[]
+                        {
                         p.DataPedido.ToString(),
+                        p.Nome,
                         p.TipoPedido,
+                        p.FormaPagamento,
                         p.ValorTotal.ToString("C")
-                    }); ;
-                    Total = +p.ValorTotal;
-                    TotalBox.Text = Total.ToString("C");
-                    PedidosPeriodoList.Items.Add(item);
+                        }); ;
+                        Total = +p.ValorTotal;
+                        TotalBox.Text = Total.ToString("C");
+                        PedidosPeriodoList.Items.Add(item);
+                    }
+                    if (PgtoBox.Text == "Todos")
+                    {
+                        ListViewItem item = new ListViewItem(new string[]
+                        {
+                        p.DataPedido.ToString(),
+                        p.Nome,
+                        p.TipoPedido,
+                        p.FormaPagamento,
+                        p.ValorTotal.ToString("C")
+                        }); ;
+                        Total = +p.ValorTotal;
+                        TotalBox.Text = Total.ToString("C");
+                        PedidosPeriodoList.Items.Add(item);
+                    }
                 }
             }
         }

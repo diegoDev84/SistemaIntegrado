@@ -33,18 +33,21 @@
             this.FechaButton = new System.Windows.Forms.Button();
             this.TelefoneBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.PedidosClienteList = new System.Windows.Forms.ListView();
-            this.Data = new System.Windows.Forms.ColumnHeader();
-            this.Nome = new System.Windows.Forms.ColumnHeader();
-            this.TipoPedido = new System.Windows.Forms.ColumnHeader();
-            this.ValorTotal = new System.Windows.Forms.ColumnHeader();
             this.TotalBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.PgtoBox = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.PedidosClienteList = new System.Windows.Forms.ListView();
+            this.DataPedido = new System.Windows.Forms.ColumnHeader();
+            this.Nome = new System.Windows.Forms.ColumnHeader();
+            this.TipoPedido = new System.Windows.Forms.ColumnHeader();
+            this.FormaPgto = new System.Windows.Forms.ColumnHeader();
+            this.ValorTotal = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // BuscaButton
             // 
-            this.BuscaButton.Location = new System.Drawing.Point(341, 27);
+            this.BuscaButton.Location = new System.Drawing.Point(500, 26);
             this.BuscaButton.Name = "BuscaButton";
             this.BuscaButton.Size = new System.Drawing.Size(75, 23);
             this.BuscaButton.TabIndex = 0;
@@ -55,7 +58,7 @@
             // ImprimirButton
             // 
             this.ImprimirButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.ImprimirButton.Location = new System.Drawing.Point(137, 404);
+            this.ImprimirButton.Location = new System.Drawing.Point(214, 411);
             this.ImprimirButton.Name = "ImprimirButton";
             this.ImprimirButton.Size = new System.Drawing.Size(75, 23);
             this.ImprimirButton.TabIndex = 1;
@@ -64,7 +67,7 @@
             // 
             // FechaButton
             // 
-            this.FechaButton.Location = new System.Drawing.Point(218, 404);
+            this.FechaButton.Location = new System.Drawing.Point(295, 411);
             this.FechaButton.Name = "FechaButton";
             this.FechaButton.Size = new System.Drawing.Size(75, 23);
             this.FechaButton.TabIndex = 2;
@@ -76,7 +79,7 @@
             // 
             this.TelefoneBox.Location = new System.Drawing.Point(12, 27);
             this.TelefoneBox.Name = "TelefoneBox";
-            this.TelefoneBox.Size = new System.Drawing.Size(323, 23);
+            this.TelefoneBox.Size = new System.Drawing.Size(337, 23);
             this.TelefoneBox.TabIndex = 3;
             // 
             // label1
@@ -88,44 +91,9 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Digite o Telefone do cliente";
             // 
-            // PedidosClienteList
-            // 
-            this.PedidosClienteList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Data,
-            this.Nome,
-            this.TipoPedido,
-            this.ValorTotal});
-            this.PedidosClienteList.HideSelection = false;
-            this.PedidosClienteList.Location = new System.Drawing.Point(12, 56);
-            this.PedidosClienteList.Name = "PedidosClienteList";
-            this.PedidosClienteList.Size = new System.Drawing.Size(404, 309);
-            this.PedidosClienteList.TabIndex = 5;
-            this.PedidosClienteList.UseCompatibleStateImageBehavior = false;
-            this.PedidosClienteList.View = System.Windows.Forms.View.Details;
-            // 
-            // Data
-            // 
-            this.Data.Text = "Data";
-            this.Data.Width = 80;
-            // 
-            // Nome
-            // 
-            this.Nome.Text = "Nome";
-            this.Nome.Width = 130;
-            // 
-            // TipoPedido
-            // 
-            this.TipoPedido.Text = "Tipo Pedido";
-            this.TipoPedido.Width = 100;
-            // 
-            // ValorTotal
-            // 
-            this.ValorTotal.Text = "Valor Total";
-            this.ValorTotal.Width = 90;
-            // 
             // TotalBox
             // 
-            this.TotalBox.Location = new System.Drawing.Point(319, 371);
+            this.TotalBox.Location = new System.Drawing.Point(478, 391);
             this.TotalBox.Name = "TotalBox";
             this.TotalBox.Size = new System.Drawing.Size(97, 23);
             this.TotalBox.TabIndex = 6;
@@ -133,21 +101,88 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(281, 375);
+            this.label2.Location = new System.Drawing.Point(440, 395);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 15);
             this.label2.TabIndex = 7;
             this.label2.Text = "Total";
+            // 
+            // PgtoBox
+            // 
+            this.PgtoBox.FormattingEnabled = true;
+            this.PgtoBox.Items.AddRange(new object[] {
+            "Todos",
+            "Cartão",
+            "Dinheiro",
+            "Pix",
+            "Voucher"});
+            this.PgtoBox.Location = new System.Drawing.Point(355, 27);
+            this.PgtoBox.Name = "PgtoBox";
+            this.PgtoBox.Size = new System.Drawing.Size(139, 23);
+            this.PgtoBox.TabIndex = 34;
+            this.PgtoBox.Text = "Todos";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(355, 9);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(124, 15);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Forma de Pagamento:";
+            // 
+            // PedidosClienteList
+            // 
+            this.PedidosClienteList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.DataPedido,
+            this.Nome,
+            this.TipoPedido,
+            this.FormaPgto,
+            this.ValorTotal});
+            this.PedidosClienteList.HideSelection = false;
+            this.PedidosClienteList.Location = new System.Drawing.Point(12, 57);
+            this.PedidosClienteList.Name = "PedidosClienteList";
+            this.PedidosClienteList.Size = new System.Drawing.Size(563, 323);
+            this.PedidosClienteList.TabIndex = 35;
+            this.PedidosClienteList.UseCompatibleStateImageBehavior = false;
+            this.PedidosClienteList.View = System.Windows.Forms.View.Details;
+            // 
+            // DataPedido
+            // 
+            this.DataPedido.Text = "Data Pedido";
+            this.DataPedido.Width = 100;
+            // 
+            // Nome
+            // 
+            this.Nome.Text = "Nome";
+            this.Nome.Width = 100;
+            // 
+            // TipoPedido
+            // 
+            this.TipoPedido.Text = "Tipo Pedido";
+            this.TipoPedido.Width = 120;
+            // 
+            // FormaPgto
+            // 
+            this.FormaPgto.Text = "Forma de Pagamento";
+            this.FormaPgto.Width = 130;
+            // 
+            // ValorTotal
+            // 
+            this.ValorTotal.Text = "Valor Total";
+            this.ValorTotal.Width = 120;
             // 
             // PedidosCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(429, 437);
+            this.ClientSize = new System.Drawing.Size(587, 437);
+            this.Controls.Add(this.PedidosClienteList);
+            this.Controls.Add(this.PgtoBox);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TotalBox);
-            this.Controls.Add(this.PedidosClienteList);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TelefoneBox);
             this.Controls.Add(this.FechaButton);
@@ -168,12 +203,15 @@
         private System.Windows.Forms.Button FechaButton;
         private System.Windows.Forms.TextBox TelefoneBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView PedidosClienteList;
-        private System.Windows.Forms.ColumnHeader Nome;
-        private System.Windows.Forms.ColumnHeader TipoPedido;
-        private System.Windows.Forms.ColumnHeader ValorTotal;
         private System.Windows.Forms.TextBox TotalBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ColumnHeader Data;
+        private System.Windows.Forms.ComboBox PgtoBox;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ListView PedidosClienteList;
+        private System.Windows.Forms.ColumnHeader DataPedido;
+        private System.Windows.Forms.ColumnHeader Nome;
+        private System.Windows.Forms.ColumnHeader TipoPedido;
+        private System.Windows.Forms.ColumnHeader FormaPgto;
+        private System.Windows.Forms.ColumnHeader ValorTotal;
     }
 }

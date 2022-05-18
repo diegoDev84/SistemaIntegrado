@@ -11,16 +11,13 @@ namespace SistemaApi.Services
 {
     public class ClienteService
     {
-
         private AppDbContext _context;
         private IMapper _mapper;
-
         public ClienteService(AppDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
         }
-
         public ReadClienteDto AdicionaCliente(CreateClienteDto clienteDto)
         {
             Cliente cliente = _mapper.Map<Cliente>(clienteDto);
@@ -28,7 +25,6 @@ namespace SistemaApi.Services
             _context.SaveChanges();
             return _mapper.Map<ReadClienteDto>(cliente);
         }
-
         public List<ReadClienteDto> RecuperaCliente()
         {
             List<Cliente> clientes = _context.Clientes.ToList();
@@ -38,7 +34,6 @@ namespace SistemaApi.Services
             }
             return _mapper.Map<List<ReadClienteDto>>(clientes);
         }
-
         public ReadClienteDto RecuperaClientePorId(int id)
         {
             Cliente cliente = _context.Clientes.FirstOrDefault(c => c.Id == id);
@@ -49,8 +44,6 @@ namespace SistemaApi.Services
             }
             return null;
         }
-        
-
         public Result AtualizaCliente(int id, UpdateClienteDto clienteDto)
         {
             Cliente cliente = _context.Clientes.FirstOrDefault(c => c.Id == id);
@@ -59,7 +52,6 @@ namespace SistemaApi.Services
             _context.SaveChanges();
             return Result.Ok();
         }
-
         public Result DeletaCliente(int id)
         {
             Cliente cliente = _context.Clientes.FirstOrDefault(c => c.Id == id);

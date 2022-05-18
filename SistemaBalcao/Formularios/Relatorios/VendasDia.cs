@@ -19,6 +19,11 @@ namespace SistemaBalcao.Formularios.Relatorios
             InitializeComponent();
             BuscarVendasDia();
         }
+
+        private void BuscaButton_Click(object sender, EventArgs e)
+        {
+            BuscarVendasDia();
+        }
         private void FechaButton_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -33,20 +38,36 @@ namespace SistemaBalcao.Formularios.Relatorios
             {
                 if (p.DataPedido.Date == DateTime.Today)
                 {
-                    ListViewItem item = new ListViewItem(new string[]
+                    if (PgtoBox.Text == p.FormaPagamento)
                     {
+                        ListViewItem item = new ListViewItem(new string[]
+                        {
                         p.DataPedido.ToString(),
+                        p.Nome,
                         p.TipoPedido,
+                        p.FormaPagamento,
                         p.ValorTotal.ToString("C")
-                    }); ;
-
-                    Total = +p.ValorTotal;
-                    TotalBox.Text = Total.ToString("C");
-                    VendasDiaList.Items.Add(item);
+                        }); ;
+                        Total = +p.ValorTotal;
+                        TotalBox.Text = Total.ToString("C");
+                        VendasDiaList.Items.Add(item);
+                    }
+                    if (PgtoBox.Text == "Todos")
+                    {
+                        ListViewItem item = new ListViewItem(new string[]
+                        {
+                        p.DataPedido.ToString(),
+                        p.Nome,
+                        p.TipoPedido,
+                        p.FormaPagamento,
+                        p.ValorTotal.ToString("C")
+                        }); ;
+                        Total = +p.ValorTotal;
+                        TotalBox.Text = Total.ToString("C");
+                        VendasDiaList.Items.Add(item);
+                    }
                 }
             }
         }
-
-
     }
 }

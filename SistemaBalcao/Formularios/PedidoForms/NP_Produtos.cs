@@ -86,10 +86,17 @@ namespace SistemaBalcao.Forms.PedidoForms
                 TotalPedidoBox.Text = _totalPedido.ToString("C");
             }
 
+            if (PgtoBox.Text == "Selecione")
+            {
+                MessageBox.Show("Forma de Pagamento é obrigatória!");
+                return;
+            }
+            NovoPedido.Nome = NomePedidoBox.Text;                
             NovoPedido.TipoPedido = TipoPedidoBox.Text;
             NovoPedido.ValorTotal = _totalPedido;
             NovoPedido.DataPedido = DateTime.Now;
             NovoPedido.ClienteID = NP_Cliente.ClienteID;
+            NovoPedido.FormaPagamento = PgtoBox.Text;
 
             await PedidoRequest.NovoPedido(NovoPedido);
             impressora.Print();
@@ -98,7 +105,6 @@ namespace SistemaBalcao.Forms.PedidoForms
 
         private void impressora_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-
             int tamanhoDaLinha = 25;
             int espacamento = 25;
             void Escrever(string texto)
@@ -164,7 +170,6 @@ namespace SistemaBalcao.Forms.PedidoForms
             }
             tamanhoDaLinha += espacamento;
             Escrever("Agradecemos a preferência!");
-
         }
 
         private void CancelaItemButton_Click(object sender, EventArgs e)

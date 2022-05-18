@@ -13,7 +13,7 @@ namespace SistemaApi.Profiles
             CreateMap<Cliente, ReadClienteDto>()
                 .ForMember(cliente => cliente.Pedidos, opts => opts
                 .MapFrom(cliente => cliente.Pedidos.Select
-                (p => new { p.DataPedido, p.TipoPedido, p.ValorTotal })));
+                (p => new { p.Nome, p.DataPedido, p.TipoPedido, p.ValorTotal, p.FormaPagamento })));
             CreateMap<UpdateClienteDto, Cliente>();
         }
         

@@ -20,6 +20,11 @@ namespace SistemaBalcao.Formularios.Relatorios
             BuscarDeliveryDia();
         }
 
+        private void BuscaButton_Click(object sender, EventArgs e)
+        {
+            BuscarDeliveryDia();
+        }
+
         private void FechaButton_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -34,16 +39,34 @@ namespace SistemaBalcao.Formularios.Relatorios
             {
                 if (p.TipoPedido == "Tele-Entrega" && p.DataPedido.Date == DateTime.Today)
                 {
-                    ListViewItem item = new ListViewItem(new string[]
+                    if (PgtoBox.Text == p.FormaPagamento)
                     {
+                        ListViewItem item = new ListViewItem(new string[]
+                        {
                         p.DataPedido.ToString(),
+                        p.Nome,
                         p.TipoPedido,
+                        p.FormaPagamento,
                         p.ValorTotal.ToString("C")
-                    });;
-
-                    Total = +p.ValorTotal;
-                    TotalBox.Text = Total.ToString("C");
-                    DeliveryDiaList.Items.Add(item);
+                        }); ;
+                        Total = +p.ValorTotal;
+                        TotalBox.Text = Total.ToString("C");
+                        DeliveryDiaList.Items.Add(item);
+                    }
+                    if (PgtoBox.Text == "Todos")
+                    {
+                        ListViewItem item = new ListViewItem(new string[]
+                        {
+                        p.DataPedido.ToString(),
+                        p.Nome,
+                        p.TipoPedido,
+                        p.FormaPagamento,
+                        p.ValorTotal.ToString("C")
+                        }); ;
+                        Total = +p.ValorTotal;
+                        TotalBox.Text = Total.ToString("C");
+                        DeliveryDiaList.Items.Add(item);
+                    }
                 }
             }
         }

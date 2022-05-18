@@ -21,7 +21,5 @@ namespace SistemaApi.Data.Dtos
         public string CEP { get; set; }
         public string Email { get; set; }
         public object Pedidos { get; set; }   
-
-
     }
 }

@@ -9,5 +9,6 @@ namespace SistemaApi.Data.Dtos.Pedido
         [Required]
         public int Id { get; set; }
         public double ValorTotal { get; set; }
+        public string FormaPagamento { get; set; }
     }
 }

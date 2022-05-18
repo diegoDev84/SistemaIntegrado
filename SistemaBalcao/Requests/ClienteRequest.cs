@@ -20,10 +20,18 @@ namespace SistemaBalcao.Requests
 
         public static List<Pedido> ClientePedidos(int clienteID)
         {
-            string url = $"https://dragon-api.herokuapp.com/cliente/{clienteID}";
-            string json = (new System.Net.WebClient()).DownloadString(url);
-            var lista = JsonConvert.DeserializeObject<Cliente>(json);
-            return lista.Pedidos;
+            try
+            {
+                string url = $"https://dragon-api.herokuapp.com/cliente/{clienteID}";
+                string json = (new System.Net.WebClient()).DownloadString(url);
+                var lista = JsonConvert.DeserializeObject<Cliente>(json);
+                return lista.Pedidos;
+            }
+            catch
+            {
+                MessageBox.Show("Cliente não encontrado!");
+                return null;
+            }
         }
 
         public static async Task AdicionarCliente(Cliente cliente)

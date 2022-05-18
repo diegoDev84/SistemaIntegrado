@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SistemaApi.Data;
 
 namespace SistemaApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220517202742_adicionando forma de pgto")]
+    partial class adicionandoformadepgto
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -155,9 +157,6 @@ namespace SistemaApi.Migrations
                         .HasColumnType("datetime");
 
                     b.Property<string>("FormaPagamento")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Nome")
                         .HasColumnType("text");
 
                     b.Property<string>("TipoPedido")
